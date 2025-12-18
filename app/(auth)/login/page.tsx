@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { Form, Button, Schema, Message } from 'rsuite'
+import { useRouter } from 'next/navigation'
 
 const { StringType } = Schema.Types
 
@@ -21,6 +22,7 @@ export default function LoginPage() {
     })
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
+    const router = useRouter()
 
     const handleSubmit = async () => {
         setLoading(true)
@@ -29,11 +31,15 @@ export default function LoginPage() {
         const res = await signIn('credentials', {
             redirect: false,
             email: formValue.email,
-            password: formValue.password
+            password: formValue.password,
         })
 
         if (res?.error) {
             setError('Invalid email or password')
+        }
+        
+        if (res?.ok) {
+            router.push('/dashboard')
         }
 
         setLoading(false)

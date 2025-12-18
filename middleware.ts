@@ -1,9 +1,5 @@
-import { withAuth } from "next-auth/middleware"
-
-export default withAuth({
-  // options here if needed
-})
+export { default } from 'next-auth/middleware'
 
 export const config = {
-  matcher: ['/dashboard/:path*'],
+  matcher: ['/dashboard/:path*']
 }
