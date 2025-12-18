@@ -42,7 +42,7 @@ export default function LoginPage() {
     return (
         <div className="flex min-h-screen items-center justify-center bg-gray-100">
             <div className="w-full max-w-sm bg-white  p-6 rounded-xl shadow">
-                <h1 className="text-xl font-semibold text-center mb-4">
+                <h1 className="text-xl font-semibold text-center mb-4 ">
                     Admin Login
                 </h1>
 
@@ -56,7 +56,7 @@ export default function LoginPage() {
                     fluid
                     model={model}
                     formValue={formValue}
-                    onChange={setFormValue}
+                    onChange={(value) => setFormValue(value as typeof formValue)}
                     onSubmit={handleSubmit}
                 >
                     <Form.Group>
