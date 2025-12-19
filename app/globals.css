@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @import "rsuite/dist/rsuite.min.css";
+
+
+.rs-picker,.rs-picker-toggle {
+    width: 100% !important;
+}

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { FaUsers, FaCog, FaHome, FaWarehouse } from 'react-icons/fa'
 import { defineAbilityFor } from '../../lib/casl/ability'
-import { FaW } from 'react-icons/fa6'
 
 type SidebarProps = {
     role?: string
