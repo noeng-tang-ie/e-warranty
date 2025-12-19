@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @import "rsuite/dist/rsuite.min.css";
+
+html,
+body,
+.app-root {
+  width: 100%;
+  overflow-x: hidden;
+}
